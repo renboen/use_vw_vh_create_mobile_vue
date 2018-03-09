@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>vuetemplate</title>
+    <link rel="stylesheet" href="./static/index.css">
+
+</head>
+
+<body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <script src="./static/viewporthack.js"></script>
+    <script src="./static/viewporthack2.js"></script>
+</body>
+<script>
+    window.onload = function() {
+        window.viewportUnitsBuggyfill.init({
+            hacks: window.viewportUnitsBuggyfillHacks
+        });
+        var winDPI = window.devicePixelRatio;
+        var uAgent = window.navigator.userAgent;
+        var screenHeight = window.screen.height;
+        var screenWidth = window.screen.width;
+        var winWidth = window.innerWidth;
+        var winHeight = window.innerHeight;
+        alert("Windows DPI:" + winDPI + ";\ruAgent:" + uAgent + ";\rScreen Width:" + screenWidth + ";\rScreen Height:" + screenHeight + ";\rWindow Width:" + winWidth + ";\rWindow Height:" + winHeight)
+    }
+</script>
+
+</html>
